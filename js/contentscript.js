@@ -134,7 +134,7 @@ function addsuggestionBox(parent,idno) {
 		
 		console.log("Loading autocomplete...");
 		
-		var setOriginalListSource,results,wordforTABevent,first_time=true,word_counter=0,active_word=1;
+		var setOriginalListSource,results,wordforTABevent,covertext,first_time=true,word_counter=0,active_word=1;
 		
 		$( mybox ).bind( "keydown", function( event ) {
 			if ( event.keyCode == $.ui.keyCode.TAB ) {
@@ -241,7 +241,8 @@ function addsuggestionBox(parent,idno) {
 							var boxval = $(mybox).val();			
 							var lastspaceIndex = boxval.lastIndexOf(' ');
 							//console.log(boxval.length - lastspaceIndex);
-							$(myboxcover).val(boxval + value.substring(boxval.length - lastspaceIndex - 1, value.length));
+							covertext = boxval + value.substring(boxval.length - lastspaceIndex - 1, value.length)
+							$(myboxcover).val(covertext);
 						}
 						return false;
 					},
@@ -271,6 +272,13 @@ function addsuggestionBox(parent,idno) {
 						$(this).autocomplete("option","source",setOriginalListSource);
 					}
 			}).data("ui-autocomplete")._renderItem = customItemrenderer;
+		console.log($( mybox ).autocomplete("widget"));
+		
+		$( mybox ).autocomplete("widget").mouseenter(function(event){
+			$(myboxcover).val(covertext);
+			active_word=0;
+		});
+		
 		console.log("Autocomplete loaded...");
 		chrome.runtime.sendMessage({DOM_updated: "yes"}, function(response) {
 		  console.log("Page action icon loaded? "+response.page_action_icon_loaded);
