@@ -10,6 +10,6 @@ These words get **synced with your browser**. So, get access to them through all
 Smart Typer not only provides users a simple and intuitive interface for its usage, but also for managing their custom added words.
 It is **light-weight** and **very fast** while suggesting.
 
-<p align="center"> <img src="https://raw.githubusercontent.com/j809/FB-Smart-Typer/master/screenshots/screenshot.png"/><img src="https://raw.githubusercontent.com/j809/FB-Smart-Typer/master/screenshots/screenshot_other.png"/><img src="https://raw.githubusercontent.com/j809/FB-Smart-Typer/master/screenshots/screenshot_start.png"/></p>
+<p align="center"> <img src="https://raw.githubusercontent.com/j809/FB-Smart-Typer/master/screenshots/screenshot.png" style="border:1px solid black"/></p>
 
 [LICENSE] (https://github.com/j809/FB-Smart-Typer/blob/master/LICENSE)
