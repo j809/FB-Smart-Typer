@@ -193,8 +193,14 @@ function addsuggestionBox(parent,idno) {
 			}
 			else if( active_word < 1)
 				active_word = 1;
-			else if( event.keyCode == ( $.ui.keyCode.SPACE || $.ui.keyCode.ENTER || $.ui.keyCode.NUMPAD_ENTER ) ) {
+			else if( event.keyCode == $.ui.keyCode.SPACE ) {
 				$(mybox).autocomplete("close");
+			}
+			else if( event.keyCode == ( $.ui.keyCode.ENTER || $.ui.keyCode.NUMPAD_ENTER ) ) {
+				$(mybox).val('');
+				$(myboxcover).val('');
+				$(mybox).autocomplete("close");
+				$(mybox).keydown();
 			}
 		}).autocomplete({
 			minLength: 0,
