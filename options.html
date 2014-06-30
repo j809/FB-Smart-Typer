@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Smart Typer</title>
+		<link type="text/css" rel="stylesheet" href="css/options.css">
+	</head>
+	<body>
+		<div class="page-heading"><h2>Smart Typer Options</h2></div>
+		<div class="description">
+			Smart Typer gives quick autocomplete suggestions to your Facebook chatbox.
+			<p>It allows user to create a custom dictionary for words not present in the dictionary.
+			<br/>Your custom dictionary is also used for suggestions.</p>
+			<p>Also, it is <b>synced</b> with your extension. So you can access it on your other devices having this extension.However, this space is not infinite.(Look Here: <a href="http://dev.opera.com/extensions/storage.html#property-sync" target="_blank">Sync Storage</a>)</p>
+			
+			<p>You can add words to this dictionary here as well as from Facebook chat itself.
+			<br/>Also, here you can remove certain words and even completely reset your dictionary.</p>
+		</div>
+		<div class="options">
+			<ul>
+				<li><b>Add a Word(here)</b> : Click the input field, input a word and click "Save" button.(Don't forget to save else word will not be added)<br/>Words must have:</li>
+				<ul>
+					<li>Atleast length of 2 letters</li>
+					<li>No spaces</li>
+				</ul>
+				<li><b>Remove a Word</b> : Click "x"(remove) buttom besides the word.</li>
+				<li><b>Reset Custom Dictionary</b> : Click "Reset" button to clear your custom dictionary/remove all words.</li>
+			</ul>
+		</div>
+		<p class="dict-description">
+			<b>Your Custom words dictionary</b><br/>
+			Add/Remove words below:
+		</p>
+		<div class="dict-container">
+			<table class="custom-dict-words" cellspacing="0" cellpadding="0">
+				<tr class="box-button-grp">
+					<td><div class="word-boxes" id="new-word" placeholder="Click here to add a word..." contenteditable="true"></div></td>
+				</tr>
+				<!--<tr class="box-button-grp">
+					<td><div class="word-boxes" id="word-1"></div></td>
+					<td><button class="buttons remove" id="but-1">x</button></td>
+				</tr>-->
+		   </table>
+		</div>
+		<div class="msg-button">
+		   <div class="buttons-grp">
+				<button class="buttons" id="save">Save</button>
+				<button class="buttons" id="reset">Reset</button>
+				<div class="message">Message to show</div>
+		   </div>
+		   <br/><i>Created by Jay Panchal</i>
+		</div>
+	</body>
+	<script src="js/jquery-latest.min.js"></script>
+	<script src="js/options.js"></script>
+</html>

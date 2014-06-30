@@ -1,0 +1,26 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	width:auto;
+	min-width:90px;
+	font-size:12px;
+	background-color:#E9EAED;
+}
+.list {
+	width:100%;
+}
+.list tr td {
+	height:15px;
+	padding:5px;
+	cursor:pointer;
+	border-top:1px #C6C6CE solid;
+	font-weight:600;
+	vertical-align:middle;
+}
+.list tr:first-child td{
+	border-top:none;
+}
+a:-webkit-any-link {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}

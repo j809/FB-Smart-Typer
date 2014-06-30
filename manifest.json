@@ -1,0 +1,37 @@
+{
+	"name": "FB Smart Typer",
+	"version": "1.0.0",
+	"manifest_version": 2,
+
+	"description": "Provides smart and fast autocomplete suggestion in your facebook chat.",
+	"developer": {
+		"name": "Jay Panchal"
+	},
+	"homepage_url": "https://github.com/j809/FB-Smart-Typer",
+	"icons": { 
+		"16": "images/icon16.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png" 
+	},
+
+	"page_action": {
+		"default_title": "Smart Typer loaded",
+		"default_icon": "images/pageaction_icon.png",
+		"default_popup": "popup.html"
+	},
+
+	"background": {
+		"scripts": ["js/background.js"]
+	},
+	"content_scripts": [{
+		"matches":	["*://www.facebook.com/*"],
+		"js":	["js/jquery-latest.min.js", "js/jquery-ui.min.custom.js", "js/words.js", "js/contentscript.js", "js/mutation-observe.js"],
+		"css": ["css/jquery-ui.css"]
+	}],	"key":"MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDon3SpEpO251F9u1AVI7mJbKY2z8yVWHZf8hRqas4usllsAf7KDwvccuDnkXHUzIqMqcxZPa0FEi2+kNx88BWPvbuGBE+qgyMaxrNyMiC0Nz/5ixF1RuUB6xIr1Ttzl8yHfHI7B/VDLvuxVuwOePLAFv6xLCR2UbaVU",
+	"options_page": "options.html",
+	"permissions": [
+		"tabs", "*://www.facebook.com/*", "storage"
+	],
+	
+	"update_url": "https://extension-updates.opera.com/api/omaha/update/"
+}
