@@ -24,7 +24,7 @@ function onload_getStorage() {
 	dictionary = {};
 	dictionary.words = [];
 	console.log("On start custom dictionary loaded as: ");
-	storage.get('words', function(items) {
+	storage.get( 'words', function(items) {
 		console.log(items);
 		var words = items.words;
 		if ( typeof words != 'undefined' ) {
@@ -163,4 +163,14 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
 			console.log(storageChange.newValue);
 		}
 	}
+});
+chrome.runtime.onInstalled.addListener( function(details){
+    if(details.reason == "install") {
+        console.log("This is a first install!");
+		chrome.tabs.create({url: chrome.extension.getURL('help.html')});
+    }
+	else if(details.reason == "update") {
+        var thisVersion = chrome.runtime.getManifest().version;
+        console.log("Updated from " + details.previousVersion + " to " + thisVersion + "!");
+    }
 });

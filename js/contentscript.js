@@ -197,10 +197,12 @@ function addsuggestionBox(parent,idno) {
 				$(mybox).autocomplete("close");
 			}
 			else if( event.keyCode == ( $.ui.keyCode.ENTER || $.ui.keyCode.NUMPAD_ENTER ) ) {
-				$(mybox).val('');
-				$(myboxcover).val('');
-				$(mybox).autocomplete("close");
-				$(mybox).keydown();
+				if( !event.shiftKey) {
+					$(mybox).val('');
+					$(myboxcover).val('');
+					$(mybox).autocomplete("close");
+					$(mybox).keydown();
+				}
 			}
 		}).autocomplete({
 			minLength: 0,
