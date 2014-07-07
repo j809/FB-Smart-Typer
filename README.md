@@ -14,4 +14,5 @@ It is **light-weight** and **very fast** while suggesting.
 
 The current source manifest is for Opera Extension.
 The same source works on Chrome. Remove "developer" key and change "update_url" in manifest file for this.
+
 [LICENSE] (https://github.com/j809/FB-Smart-Typer/blob/master/LICENSE)
