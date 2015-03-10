@@ -13,6 +13,6 @@ It is **light-weight** and **very fast** while suggesting.
 <p align="center"> <img src="https://raw.githubusercontent.com/j809/FB-Smart-Typer/master/screenshots/maincover.png"/></p>
 
 The current source manifest is for Opera Extension.
-The same source works on Chrome. Remove "developer" key and change "update_url" in manifest file for this.
+The same source works on Chrome. Remove "developer" key and change "update_url" in <a href="https://github.com/j809/FB-Smart-Typer/blob/master/manifest.json">manifest</a> file for this.
 
 [LICENSE] (https://github.com/j809/FB-Smart-Typer/blob/master/LICENSE)
